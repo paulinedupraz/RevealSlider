@@ -1,0 +1,107 @@
+/**
+ * Css3 Helper file
+ */
+/* Linear gradient */
+/* Border radius */
+/* Box shadow */
+/**
+ * Text shadow */
+/* Transition */
+/* Opacity */
+/* User select */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 13px Arial, sans-serif;
+}
+.content {
+  margin: 30px auto;
+  width: 850px;
+}
+.reveal {
+  width: 850px;
+  height: 478px;
+  margin-bottom: 30px;
+  background: #aaa;
+}
+.reveal .dragger {
+  width: 39px;
+  height: 39px;
+  bottom: 50%;
+  background-color: #eee;
+  color: #555;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-transition: background-color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+.reveal .dragger span {
+  display: block;
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.reveal .dragger span.left-arrow {
+  margin-left: 6px;
+}
+.reveal .dragger.active {
+  background-color: #333;
+  color: #eee;
+  -moz-transition: background-color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+.reveal.changing-media .dragger {
+  background-image: url('img/loader.gif');
+  background-repeat: no-repeat;
+}
+.reveal.changing-media .dragger span {
+  display: none;
+}
+.reveal .navigation {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.reveal .navigation li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  text-indent: -999px;
+  overflow: hidden;
+  float: left;
+  background: #333;
+  margin-right: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-transition: background 0.2s ease-in;
+  -webkit-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+.reveal .navigation li.active {
+  background: #ccc;
+}
+.covered {
+  border-right: 1px #333 dashed;
+}
+.reveal img {
+  height: auto;
+  width: 100%;
+}
+.reveal .container-inner {
+  width: 850px;
+  height: 478px;
+}

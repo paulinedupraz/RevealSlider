@@ -1,0 +1,114 @@
+
+/**
+ * Css3 Helper file
+ */
+ 
+
+/* Linear gradient */
+
+.linear-gradient(
+    @color1: #eee,
+    @color2: #ccc,
+    @iecolor1: '#99000000',
+    @iecolor2: '#99000000'
+){
+    background:-moz-linear-gradient(top, @color1, @color2);
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0, @color1),color-stop(1, @color2));
+	filter:e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d,endColorstr=%d)", @iecolor1, @iecolor2));
+    zoom: 1;
+
+
+    background-color: transparent;
+    
+    -moz-background-clip: padding;      /* Firefox 1.0-3.6 */
+    -webkit-background-clip: padding-box;  /* Safari, Chrome */
+    background-clip: padding-box;  /* Firefox 4.0+, Opera */
+}
+
+
+/* Border radius */
+.border-radius(
+	@radius: 5px
+){
+	border-radius:@radius;
+    -moz-border-radius:@radius;
+    -webkit-border-radius:@radius;
+}
+
+
+
+/* Box shadow */
+.box-shadow(
+    @offsetX: 5px,
+    @offsetY: 5px,
+    @blur: 5px,
+    @color: black
+){
+    box-shadow:@offsetX @offsetY @blur @color;
+    -moz-box-shadow:@offsetX @offsetY @blur @color;
+    -webkit-box-shadow:@offsetX @offsetY @blur @color;
+}
+
+.box-shadow-inset(
+    @offsetX: 5px,
+    @offsetY: 5px,
+    @blur: 5px,
+    @color: black
+){
+    box-shadow:inset @offsetX @offsetY @blur @color;
+    -moz-box-shadow:inset @offsetX @offsetY @blur @color;
+    -webkit-box-shadow:inset @offsetX @offsetY @blur @color;
+}
+
+
+/**
+ * Text shadow */
+.text-shadow(
+    @offsetX: 5px,
+    @offsetY: 5px,
+    @blur: 5px,
+    @color: black
+){
+    text-shadow:@offsetX @offsetY @blur @color;
+    -moz-text-shadow:@offsetX @offsetY @blur @color;
+    -webkit-text-shadow:@offsetX @offsetY @blur @color;
+}
+
+
+/* Transition */
+.transition(
+    @time: 1s,
+    @ease: ease-in,
+    @range: all
+){
+    -moz-transition: @range @time @ease;
+    -webkit-transition: @range @time @ease;
+    -o-transition: @range @time @ease;
+    -ms-transition: @range @time @ease;
+    transition: @range @time @ease;
+}
+
+
+/* Opacity */
+.opacity(
+    @opacity: .5
+){
+    /* -ms-filter:e(%("progid:DXImageTransform.Microsoft.Alpha(Opacity=%d)", @opacity)); */
+    filter:e(%("alpha(opacity=%d)", @opacity*100));
+    -moz-opacity:@opacity;
+    -khtml-opacity:@opacity;
+    opacity:@opacity;
+}
+
+/* User select */
+.user-select(
+	@select: none
+){
+	-webkit-user-select: @select;
+	-khtml-user-select: @select;
+	-moz-user-select: @select;
+	-o-user-select: @select;
+	user-select: @select;
+}
+
+
